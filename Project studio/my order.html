@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care - Techmart.in</title>
+    <link rel="stylesheet" href="orders.css">
+    <style>
+        .care-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .care-box {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+        .care-box h3 {
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+        details {
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            background: #f8fafc;
+        }
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #1e293b;
+        }
+        details p {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        .support-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .support-form input, .support-form select, .support-form textarea {
+            padding: 0.65rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 0.92rem;
+        }
+        .ticket-success {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.9rem;
+            background: #dcfce7;
+            border: 1px solid #22c55e;
+            color: #166534;
+            border-radius: 6px;
+        }
+        .ticket-success:target {
+            display: block;
+        }
+        @media (max-width: 750px) {
+            .care-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>Techmart<span>.in</span></h1>
+            <p class="tagline">Smart Electronics & Digital Store</p>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="my-orders.html">My order</a>
+            <a href="customer-care.html" class="active-link">Customer care</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-banner">
+            <div>
+                <h2>Techmart.in Customer Care</h2>
+                <p>Helpline: <strong>1800-102-8324</strong> (Mon–Sat, 9 AM – 8 PM) | Email: <strong>support@techmart.in</strong></p>
+            </div>
+            <a href="my-orders.html" class="btn-outline">Track My Order</a>
+        </div>
+
+        <div class="care-layout">
+            <!-- Left Column: Pure HTML Accordion FAQs -->
+            <div class="care-box">
+                <h3>Frequently Asked Questions</h3>
+
+                <details open>
+                    <summary>How is GST calculated on my Techmart.in bill?</summary>
+                    <p>All electronics on Techmart.in carry a standard 18% GST (9% CGST + 9% SGST), which is itemized clearly in your shopping cart and downloadable tax invoice.</p>
+                </details>
+
+                <details>
+                    <summary>What is the return & replacement policy?</summary>
+                    <p>We offer a 7-day replacement guarantee for damaged, defective, or wrong items delivered. Keep the original box and GST invoice handy.</p>
+                </details>
+
+                <details>
+                    <summary>How long do refunds take for cancelled orders?</summary>
+                    <p>Prepaid UPI, card, and net banking refunds are processed back to your original payment source within 2–4 business days.</p>
+                </details>
+
+                <details>
+                    <summary>How do I download my GST Tax Invoice?</summary>
+                    <p>Visit the <strong>My order</strong> page and click <strong>"View Tax Invoice"</strong> on any active or delivered order card.</p>
+                </details>
+            </div>
+
+            <!-- Right Column: Support Ticket Form -->
+            <div class="care-box">
+                <h3>Raise a Support Ticket</h3>
+                <form action="#ticket-raised" method="get" class="support-form">
+                    <label for="ticket-name">Your Full Name *</label>
+                    <input type="text" id="ticket-name" name="ticket-name" placeholder="Enter your name" required minlength="3">
+
+                    <label for="ticket-order">Order ID (Optional)</label>
+                    <input type="text" id="ticket-order" name="ticket-order" placeholder="e.g., TM-2026-8841">
+
+                    <label for="ticket-issue">Issue Category *</label>
+                    <select id="ticket-issue" name="ticket-issue" required>
+                        <option value="">-- Select Issue Type --</option>
+                        <option value="delivery">Delivery & Tracking Delay</option>
+                        <option value="billing">GST Invoice & Billing Query</option>
+                        <option value="return">Return / Warranty Claim</option>
+                        <option value="refund">Cancellation & Refund</option>
+                    </select>
+
+                    <label for="ticket-msg">Describe Your Query *</label>
+                    <textarea id="ticket-msg" name="ticket-msg" rows="3" placeholder="Write your message here..." required minlength="10"></textarea>
+
+                    <button type="submit" class="btn-primary">Submit Support Request</button>
+                </form>
+
+                <div id="ticket-raised" class="ticket-success">
+                    <strong>Support Ticket Registered!</strong> Our Techmart.in care team will reply to your query within 4 working hours.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Techmart.in Online Shopping Catalogue | <a href="index.html">Back to Home</a></p>
+    </footer>
+
+</body>
+</html>

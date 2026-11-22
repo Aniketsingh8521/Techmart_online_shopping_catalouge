@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techmart.in - Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f4f6f9;
+      color: #222222;
+    }
+    header {
+      background-color: #131921;
+      color: #ffffff;
+      padding: 15px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff9900;
+      text-decoration: none;
+    }
+    .search-bar {
+      display: flex;
+      flex: 1;
+      max-width: 450px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 9px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search-bar button {
+      padding: 9px 16px;
+      border: none;
+      background-color: #ff9900;
+      font-weight: bold;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 18px;
+    }
+
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #ff9900;
+      font-weight: bold;
+    }
+    main {
+      max-width: 1300px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      border-bottom: 2px solid #ff9900;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background-color: #eeeeee;
+    }
+
+    .product-card h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #b12704;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .product-card ul {
+      margin-left: 18px;
+      margin-bottom: 14px;
+      font-size: 13.5px;
+      color: #444444;
+      line-height: 1.5;
+    }
+    .card-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .card-buttons a {
+      flex: 1;
+      padding: 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #111111;
+      font-size: 13.5px;
+    }
+
+    .btn-buy {
+      background-color: #ffa41c;
+    }
+
+    .btn-cart {
+      background-color: #ffd814;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      background-color: #131921;
+      color: #cccccc;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ff9900;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="Main.html" class="logo">Techmart.in</a>
+
+    <form action="Main.html" method="GET" class="search-bar">
+      <input type="search" name="q" placeholder="Search tech products...">
+      <button type="submit">Search</button>
+    </form>
+
+    <nav class="nav-menu">
+      <a href="Main.html" class="active">Home</a>
+      <a href="About me.html">About</a>
+      <a href="my order.html">My order</a>
+      <a href="Customer care.html">Customer care</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Latest Items</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoZeEHmabSq38Xbx_ViFJTRsGzORRzQhkr-fJ9FI6pXw&s=10" alt="MacBook Air M1">
+          <h3>Apple MacBook Air M1</h3>
+          <div class="price">Price: ₹59,999</div>
+          <ul>
+            <li>256 GB SSD &amp; 8 GB RAM</li>
+            <li>Lightweight (1.29 Kg)</li>
+            <li>M1 Chip (8-core CPU)</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBbiY7KAI8g9aA3Y-qqia0uV9mZ1imH9qBxCT6PRekeg&s=10" alt="RTX 4060">
+          <h3>GeForce RTX 4060 Graphic Card</h3>
+          <div class="price">Price: ₹28,500</div>
+          <ul>
+            <li>8GB GDDR6 (128-bit)</li>
+            <li>Up to 2.46 GHz boost</li>
+            <li>115W TGP efficiency</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7yF1nmbObWsFX5IowICIW17nXS1NbF87V1oHlGZiPlQ&s=10" alt="ASUS Mouse">
+          <h3>ASUS Bluetooth Silent Mouse</h3>
+          <div class="price">Price: ₹899</div>
+          <ul>
+            <li>Up to 1600 DPI resolution</li>
+            <li>Smooth tracking</li>
+            <li>Low-noise silent clicks</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCGFOnp0XYzxcUkkDmKsiKfLZ5rR0AiuvLDESW2Ab0Mw&s=10" alt="Keychron K2">
+          <h3>Keychron K2 Mechanical Keyboard</h3>
+          <div class="price">Price: ₹7,499</div>
+          <ul>
+            <li>75% compact wireless layout</li>
+            <li>Hot-swappable brown switches</li>
+            <li>Mac &amp; Windows compatible</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNgzkOQUGF4TlF3s4xj1x187_ZKfsuzLk-7Q6Vgsfvfw&s=10" alt="Sony XM5">
+          <h3>Sony WH-1000XM5 Headphones</h3>
+          <div class="price">Price: ₹24,990</div>
+          <ul>
+            <li>Active Noise Cancellation</li>
+            <li>30-hour battery life</li>
+            <li>Multipoint Bluetooth 5.2</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div> 
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmxyQM5dDv3Hz0S6kUlBx5BxwfAFgJ3JfkPnHxNA9j6A&s=10" alt="LG Monitor">
+          <h3>LG UltraGear 27" Gaming Monitor</h3>
+          <div class="price">Price: ₹18,999</div>
+          <ul>
+            <li>144Hz refresh rate, 1ms response</li>
+            <li>QHD IPS display</li>
+            <li>NVIDIA G-Sync compatible</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZWYCka9i7owM-5niic5uHcQzAs4xPFAm01BxPgLYuQ&s=10" alt="Samsung SSD">
+          <h3>Samsung 980 PRO 1TB NVMe SSD</h3>
+          <div class="price">Price: ₹8,299</div>
+          <ul>
+            <li>PCIe 4.0 x4 NVMe interface</li>
+            <li>Up to 7,000 MB/s read speed</li>
+            <li>M.2 2280 form factor</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVNyA1iyXuMV_PJHMlRbSOaeieZmfU2dpHjHXnAG7-cA&s=10" alt="Ryzen 7">
+          <h3>AMD Ryzen 7 7800X3D CPU</h3>
+          <div class="price">Price: ₹35,499</div>
+          <ul>
+            <li>8 Cores, 16 Threads</li>
+            <li>Up to 5.0 GHz Max Boost</li>
+            <li>96MB L3 3D V-Cache</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5QGc83diHC_Yce15TkjxVPfi1fdTn7-Vf652mvRZgbw&s=10" alt="Logitech Webcam">
+          <h3>Logitech C920 HD Pro Webcam</h3>
+          <div class="price">Price: ₹5,495</div>
+          <ul>
+            <li>Full HD 1080p at 30fps</li>
+            <li>Dual stereo microphones</li>
+            <li>Auto light correction</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9Z4bMZ3oAKyQsSdlUG3M3PevGv0ive5mBxk4VHi0tA&s=10" alt="iPad Air">
+          <h3>Apple iPad Air (5th Gen)</h3>
+          <div class="price">Price: ₹52,900</div>
+          <ul>
+            <li>10.9-inch Liquid Retina display</li>
+            <li>Apple M1 chip, 64GB storage</li>
+            <li>Touch ID &amp; USB-C port</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY78GQsoc9EGCzw0YXTjSjue68OgKaNgkTKQv7gnIASg&s=10" alt="Galaxy Watch 6">
+          <h3>Samsung Galaxy Watch 6</h3>
+          <div class="price">Price: ₹21,999</div>
+          <ul>
+            <li>Sapphire Crystal AMOLED screen</li>
+            <li>Heart rate &amp; sleep tracking</li>
+            <li>IP68 water resistance</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRQv8jXlUT4j0Gy63MKcnpFACjJ075Pr6Lb9U4avxWg&s=10" alt="JBL Flip 6">
+          <h3>JBL Flip 6 Bluetooth Speaker</h3>
+          <div class="price">Price: ₹9,999</div>
+          <ul>
+            <li>2-way speaker system</li>
+            <li>12 hours of playtime</li>
+            <li>IP67 waterproof &amp; dustproof</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ncOA8OeUMEOYOAJ6qqk8B0OEAmHjC2ExEcz9i6NBjA&s" alt="Anker Power Bank">
+          <h3>Anker 20,000mAh Power Bank</h3>
+          <div class="price">Price: ₹3,799</div>
+          <ul>
+            <li>22.5W USB-C fast charging</li>
+            <li>Charges 3 devices at once</li>
+            <li>LED battery indicator</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-lprfZeobGkLf6aV5k_p_hViNVxR52R1a_sWWd-Gjw&s=10" alt="TP-Link Router">
+          <h3>TP-Link Archer AX55 Wi-Fi 6 Router</h3>
+          <div class="price">Price: ₹4,999</div>
+          <ul>
+            <li>AX3000 Dual-Band Wi-Fi 6</li>
+            <li>4 high-gain antennas</li>
+            <li>WPA3 network encryption</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoiWLqFq-iV5QUCMSqnDA0PEnDbRdgn_svWYDpHTcZyg&s=10" alt="HyperX Mic">
+          <h3>HyperX QuadCast S Microphone</h3>
+          <div class="price">Price: ₹12,490</div>
+          <ul>
+            <li>4 selectable polar patterns</li>
+            <li>Tap-to-mute sensor with LED</li>
+            <li>Built-in anti-vibration mount</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjVI4RF90e3HR2ZXJ1XgH8DC_mE7nTGdx9U2RTs67FsQ&s=10" alt="Kindle Paperwhite">
+          <h3>Kindle Paperwhite (16 GB)</h3>
+          <div class="price">Price: ₹13,999</div>
+          <ul>
+            <li>6.8" glare-free 300 ppi display</li>
+            <li>Adjustable warm light</li>
+            <li>Up to 10 weeks battery life</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjh-UwrtX9DQU43Y0bQG-hfiP1cS4MjtVDh3_B74Tsgw&s=10" alt="Corsair DDR5 RAM">
+          <h3>Corsair Vengeance 32GB DDR5 RAM</h3>
+          <div class="price">Price: ₹9,800</div>
+          <ul>
+            <li>2 x 16GB kit at 6000MHz</li>
+            <li>Solid aluminum heatspreader</li>
+            <li>Intel XMP 3.0 ready</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObyTmvjyzubqrLMtJwTWABeQIALljwN16TjVCrp5ooA&s" alt="Seagate HDD">
+          <h3>Seagate 2TB External Hard Drive</h3>
+          <div class="price">Price: ₹5,699</div>
+          <ul>
+            <li>USB 3.0 plug-and-play</li>
+            <li>Compact brushed metal case</li>
+            <li>Windows &amp; Mac ready</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFIQAuB8fXK_6RE3GfDWw1nAPMwEEr_RqQSW4L5b2wHg&s=10" alt="Meta Quest 3">
+          <h3>Meta Quest 3 VR Headset</h3>
+          <div class="price">Price: ₹48,999</div>
+          <ul>
+            <li>128GB internal storage</li>
+            <li>Full-color mixed reality</li>
+            <li>Touch Plus controllers included</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3MHRDFCGTaIvzDOUJAZr_EPvIdu9SksBQcdus8g7AqA&s=10" alt="ASUS ROG Ally">
+          <h3>ASUS ROG Ally Gaming Handheld</h3>
+          <div class="price">Price: ₹49,990</div>
+          <ul>
+            <li>AMD Ryzen Z1 Extreme CPU</li>
+            <li>7" 120Hz FHD touchscreen</li>
+            <li>Runs Windows 11 PC games</li>
+          </ul>
+        </div>
+        <div class="card-buttons">
+          <a href="my order.html" class="btn-buy">Buy Now</a>
+          <a href="my order.html" class="btn-cart">Add to cart</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 Techmart.in |
+    <a href="Main.html">Home</a> |
+    <a href="About me.html">About</a> |
+    <a href="my order.html">My Orders</a> |
+    <a href="Customer care.html">Customer Care</a>
+  </footer>
+</body>
+</html>
